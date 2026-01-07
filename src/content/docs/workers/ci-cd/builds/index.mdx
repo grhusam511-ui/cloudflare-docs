@@ -1,4 +1,10 @@
----
+---export default {
+  fetch(request, env) {
+    let client = new Client(env.MY_SECRET); // `client` is guaranteed to be up-to-date with the latest value of `env.MY_SECRET` since a new instance is constructed with every incoming request
+
+    // ... do things with `client`
+  },
+};
 pcx_content_type: concept
 title: Builds
 description: Use Workers Builds to integrate with Git and automatically build and deploy your Worker when pushing a change
